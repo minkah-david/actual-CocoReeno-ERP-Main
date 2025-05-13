@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* CocoReeno brand colors */
+  --brand-green: 158 207 69; /* Lemon-green */
+  --brand-green-dark: 140 175 47;
+  --brand-green-light: 196 230 117;
+  --brand-brown: 77 51 25; /* Dark brown */
+  --brand-brown-light: 122 90 60;
+  --brand-brown-dark: 46 31 15;
+  --brand-beige: 248 244 233;
+  
+  /* Base colors */
+  --background: 248 244 233;
+  --foreground: 77 51 25;
+  
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  
+  --popover: 0 0% 100%;
+  --popover-foreground: 77 51 25;
+  
+  --card: 0 0% 100%;
+  --card-foreground: 77 51 25;
+  
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  
+  --primary: 158 207 69;
+  --primary-foreground: 0 0% 100%;
+  
+  --secondary: 77 51 25;
+  --secondary-foreground: 0 0% 100%;
+  
+  --accent: 158 207 69;
+  --accent-foreground: 0 0% 100%;
+  
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  
+  --ring: 158 207 69;
+  
+  --radius: 0.5rem;
+  
+  /* Chart colors */
+  --chart-1: 158 207 69;
+  --chart-2: 77 51 25;
+  --chart-3: 122 90 60;
+  --chart-4: 196 230 117;
+  --chart-5: 46 31 15;
+  
+  /* Sidebar colors */
+  --sidebar-background: 77 51 25;
+  --sidebar-foreground: 248 244 233;
+  --sidebar-primary: 158 207 69;
+  --sidebar-primary-foreground: 248 244 233;
+  --sidebar-accent: 196 230 117;
+  --sidebar-accent-foreground: 77 51 25;
+  --sidebar-border: 46 31 15;
+  --sidebar-ring: 158 207 69;
+}
+
+.dark {
+  --background: 46 31 15;
+  --foreground: 248 244 233;
+  
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  
+  --popover: 77 51 25;
+  --popover-foreground: 248 244 233;
+  
+  --card: 77 51 25;
+  --card-foreground: 248 244 233;
+  
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  
+  --primary: 158 207 69;
+  --primary-foreground: 0 0% 100%;
+  
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  
+  --accent: 196 230 117;
+  --accent-foreground: 46 31 15;
+  
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  
+  --ring: 158 207 69;
+  
+  --chart-1: 158 207 69;
+  --chart-2: 77 51 25;
+  --chart-3: 122 90 60;
+  --chart-4: 196 230 117;
+  --chart-5: 46 31 15;
+  
+  /* Sidebar colors in dark mode */
+  --sidebar-background: 77 51 25;
+  --sidebar-foreground: 248 244 233;
+  --sidebar-primary: 158 207 69;
+  --sidebar-primary-foreground: 248 244 233;
+  --sidebar-accent: 196 230 117;
+  --sidebar-accent-foreground: 77 51 25;
+  --sidebar-border: 46 31 15;
+  --sidebar-ring: 158 207 69;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-1.5 h-1.5;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/80;
+  }
+}
+
+@layer components {
+  .stat-card {
+    @apply transition-all duration-200 ease-in-out;
+  }
+  
+  .stat-card:hover {
+    @apply transform -translate-y-1 shadow-md;
+  }
+  
+  /* Chart bars animation */
+  @keyframes grow {
+    from { height: 0; }
+    to { height: var(--target-height); }
+  }
+  
+  .chart-bar {
+    animation: grow 1s ease-out forwards;
+  }
+  
+  /* Sidebar transition */
+  .sidebar-transition {
+    @apply transition-all duration-300 ease-in-out;
+  }
+}
