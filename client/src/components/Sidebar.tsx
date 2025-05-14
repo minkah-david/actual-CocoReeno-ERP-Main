@@ -51,8 +51,8 @@ const Sidebar = ({ collapsed, setCollapsed }: SidebarProps) => {
                   <CollapsibleTrigger asChild>
                     <Button
                       variant="ghost"
-                      className={`w-full justify-start text-sm text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent/10 ${
-                        isActive(subItem.path) ? "bg-sidebar-accent/10 text-sidebar-foreground" : ""
+                      className={`w-full justify-start text-sm text-gray-300 hover:text-white hover:bg-[#5d4037] ${
+                        isActive(subItem.path) ? "bg-[#5d4037] text-white" : ""
                       }`}
                     >
                       <i className={`${subItem.icon} mr-2 text-base`}></i>
@@ -86,12 +86,12 @@ const Sidebar = ({ collapsed, setCollapsed }: SidebarProps) => {
 
   return (
     <aside 
-      className={`fixed inset-y-0 left-0 bg-sidebar-background text-sidebar-foreground flex flex-col z-30 transition-all duration-300 ease-in-out ${
+      className={`fixed inset-y-0 left-0 bg-[#4e342e] text-white flex flex-col z-30 transition-all duration-300 ease-in-out ${
         collapsed ? "w-0 md:w-20" : "w-64"
       }`}
     >
       {/* Logo & Title */}
-      <div className="flex items-center h-16 px-4 border-b border-sidebar-border">
+      <div className="flex items-center h-16 px-4 border-b border-[#5d4037]">
         <img 
           src="https://pixabay.com/get/g6f7d14410f8d54f0e4b4b9213e13d43e90cb2b20e57eef747ce571e1bd485ecd50a80dd0ccc1ece33b34065072a427a17dc62c2eddf67b989421531328b1d04d_1280.jpg" 
           alt="CocoReeno Logo" 
@@ -99,8 +99,8 @@ const Sidebar = ({ collapsed, setCollapsed }: SidebarProps) => {
         />
         {!collapsed && (
           <div className="ml-3">
-            <h1 className="font-semibold text-xl">CocoReeno</h1>
-            <p className="text-xs text-sidebar-foreground/70">Enterprise ERP</p>
+            <h1 className="font-semibold text-xl text-white">CocoReeno</h1>
+            <p className="text-xs text-gray-300">Enterprise ERP</p>
           </div>
         )}
         {isMobile && (
@@ -108,29 +108,14 @@ const Sidebar = ({ collapsed, setCollapsed }: SidebarProps) => {
             onClick={() => setCollapsed(!collapsed)} 
             variant="ghost" 
             size="icon" 
-            className="ml-auto text-sidebar-foreground/70 hover:text-sidebar-foreground"
+            className="ml-auto text-gray-300 hover:text-white"
           >
             <i className={`${collapsed ? "ri-menu-line" : "ri-close-line"} text-xl`}></i>
           </Button>
         )}
       </div>
 
-      {/* User profile */}
-      {!collapsed && (
-        <div className="p-4 border-b border-sidebar-border">
-          <div className="flex items-center space-x-3">
-            <img 
-              src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61" 
-              alt="User Profile" 
-              className="h-10 w-10 rounded-full object-cover" 
-            />
-            <div>
-              <h3 className="font-medium text-sm">Dr. Michael Kwaku</h3>
-              <p className="text-xs text-sidebar-foreground/70">CEO & Founder</p>
-            </div>
-          </div>
-        </div>
-      )}
+      {/* User profile removed as requested */}
 
       {/* Navigation */}
       <ScrollArea className="flex-1">
@@ -148,8 +133,8 @@ const Sidebar = ({ collapsed, setCollapsed }: SidebarProps) => {
                         variant="ghost"
                         className={`w-full justify-start ${
                           isActive(item.path) 
-                            ? "bg-sidebar-primary text-sidebar-primary-foreground" 
-                            : "text-sidebar-foreground hover:bg-sidebar-accent/10"
+                            ? "bg-[#9efe00] text-[#4e342e] font-medium" 
+                            : "text-white hover:bg-[#5d4037]"
                         } ${collapsed ? "px-2" : "px-4"}`}
                       >
                         <i className={`${item.icon} ${collapsed ? "" : "mr-2"} text-lg`}></i>
@@ -171,8 +156,8 @@ const Sidebar = ({ collapsed, setCollapsed }: SidebarProps) => {
                       variant="ghost"
                       className={`w-full justify-start ${
                         isActive(item.path) 
-                          ? "bg-sidebar-primary text-sidebar-primary-foreground" 
-                          : "text-sidebar-foreground hover:bg-sidebar-accent/10"
+                          ? "bg-[#9efe00] text-[#4e342e] font-medium" 
+                          : "text-white hover:bg-[#5d4037]"
                       } ${collapsed ? "px-2" : "px-4"}`}
                     >
                       <i className={`${item.icon} ${collapsed ? "" : "mr-2"} text-lg`}></i>
@@ -187,24 +172,24 @@ const Sidebar = ({ collapsed, setCollapsed }: SidebarProps) => {
       </ScrollArea>
 
       {/* Bottom actions */}
-      <div className="p-4 border-t border-sidebar-border">
+      <div className="p-4 border-t border-[#5d4037]">
         {!collapsed ? (
           <>
-            <Button variant="ghost" className="w-full justify-start text-sidebar-foreground mb-2">
+            <Button variant="ghost" className="w-full justify-start text-gray-300 hover:text-white hover:bg-[#5d4037] mb-2">
               <i className="ri-settings-3-line mr-2"></i>
               <span>Settings</span>
             </Button>
-            <Button variant="ghost" className="w-full justify-start text-sidebar-foreground">
+            <Button variant="ghost" className="w-full justify-start text-gray-300 hover:text-white hover:bg-[#5d4037]">
               <i className="ri-logout-box-line mr-2"></i>
               <span>Logout</span>
             </Button>
           </>
         ) : (
           <>
-            <Button variant="ghost" className="w-full justify-center text-sidebar-foreground mb-2">
+            <Button variant="ghost" className="w-full justify-center text-gray-300 hover:text-white hover:bg-[#5d4037] mb-2">
               <i className="ri-settings-3-line"></i>
             </Button>
-            <Button variant="ghost" className="w-full justify-center text-sidebar-foreground">
+            <Button variant="ghost" className="w-full justify-center text-gray-300 hover:text-white hover:bg-[#5d4037]">
               <i className="ri-logout-box-line"></i>
             </Button>
           </>
