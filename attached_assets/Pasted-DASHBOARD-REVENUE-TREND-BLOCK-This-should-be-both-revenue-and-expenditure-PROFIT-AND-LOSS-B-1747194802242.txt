@@ -1,0 +1,166 @@
+DASHBOARD
+	REVENUE TREND BLOCK
+•	This should be both revenue and expenditure.
+
+PROFIT AND LOSS BLOCK
+•	This should be to the right of the Revenue and Expenditure block.
+
+SALESPERSONS TRACKING MAP & PERFORMANCE
+•	Insert a row below Revenue Trend and create the map block and performance block in that row.
+•	Map Block: Add a block for salespersons. It should be a map block with geolocation, geofencing, and status of salespersons (active, idle, offline), customers, potentials. This is a summary of the live tracking data, activities and performance of salespersons.
+•	Performance Block: To the right of that block, should be another block with best performing salespersons.
+
+SIDE BAR MENU
+	UI AND DISPLAY
+•	The side bar is not properly displaying. It should be dark brown with contrasting font colors. Same for the menu icons.
+•	The profile details “Dr. Michael Kwaku, CEO & Founder” should be moved to the profile icon at the top right corner of the page.
+
+NEW MENU ITEMS
+•	New items have been added to the menu.
+•	Update the menu bar accordingly.
+•	Build all the missing pages:
+
+DEPARTMENTS MENU ITEM
+•	Fix the nested departments list. 
+•	Build each department page.
+•	This is the actual full list you should use:
+
+1.1.1.	DASHBOARD MENU
+DASHBOARD
+=============
+DEPARTMENTS (nested organogram)
+BI (Business Intelligence, analytics, reporting, forecasting, vulnerabilities, risks, 
+=============
+Architectures 
+STRATEGIES
+AI & AUTOMATIONS
+•	AI
+•	Automations & Workflows 
+===============
+SECURITY (Cybersecurity) – Isolation of attacks, vulnerabilities,
+DIAGNOSTICS (Full System)
+CLOUD MANAGER (ERP system cloud cost report, optimizer, analytics etc.)
+============
+COMMUNICATIONS
+•	Communications
+•	Projects Management
+==============
+System
+USER MANAGEMENT
+SYSTEM SETTINGS
+HELP & SUPPORT
+ 
+DEPARTMENTS ORGANOGRAM
+NESTED ORGANOGRAM UNDER THE DEPARTMENTS MENU 
+Name format:
+The name in the sidebar menu is the short one-word at the front. 
+Then on the associated page of the department, the page name will be the longer name in the brackets.
+For instance: 
+For  OPERATIONS (Operations & Supply Chain)
+•	Operations = Menu name
+•	Operations & Supply Chain = Page Title.
+
+
+    |-- FINANCE (Finance & Accountability)
+    |       |-- Financial Planning & Analysis (Projections, Forecasting)
+    |       |-- Accounting & Bookkeeping
+    |       |-- Budgeting & Cost Control
+    |       |-- Investor Relations & Capital Strategy
+    |
+    |-- OPERATIONS (Operations & Supply Chain)
+    |       |-- Harvesting & Procurement
+    |       |-- Logistics & Fleet Management
+    |       |-- Inventory & Warehousing
+    |       |-- Quality Assurance & Compliance
+    |
+    |-- SALES (Sales & Distribution)
+    |       |-- Direct Sales (B2C) – e.g., street carts, kiosks
+    |       |-- Mobile & Field Sales (formerly "Hawking")
+    |       |-- E-Commerce Sales
+    |       |-- Sales Support & Customer Success (CRM, After-Sales Service)
+    |
+    |-- MARKETING (Marketing & Branding)
+    |       |-- Brand Strategy & Market Research
+    |       |-- Campaigns & Advertising
+    |       |-- Digital Marketing
+    |               |-- Social Media (Facebook, Instagram, LinkedIn, TikTok, YouTube)
+    |               |-- Paid Ads (Google Ads, Meta Ads, TikTok Ads)
+    |               |-- AI Content Creation (AI Videos, AI Photos, AI Graphics)
+    |       |-- Public Relations & CSR
+    |
+    |-- HR (Human Resource & Administration)
+    |       |-- Recruitment & Onboarding
+    |       |-- Employee Training & Development
+    |       |-- Compensation & Benefits
+    |       |-- Performance Management
+    |       |-- Workplace Culture & Compliance
+    |
+    |-- R&D (Research & Development)
+    |       |-- Edibles (Flesh & Water)
+    |       |-- Health & Wellness
+    |       |-- Inedibles (Husk & Shell)
+    |
+    |-- RSS (Rural Development, Sustainability & Social Equity)
+    |       |-- Rural Farmer Empowerment Programmes
+    |       |-- Climate-Smart Agriculture Integration
+    |       |-- Community Livelihood Projects
+    |       |-- Carbon Footprint Reduction Initiatives
+    |       |-- Gender, Youth & Social Inclusion
+    |
+    |-- LEGAL (Legal & Regulatory Affairs)
+    |       |-- Contract Drafting & Management
+    |       |-- Intellectual Property Protection
+    |       |-- Regulatory Licensing & Permits
+    |       |-- Legal Risk & Dispute Management
+    |
+    |-- IT (Information Technology - IT & Systems)
+    |       |-- Tech Support (All Departments)
+    |       |-- Software Development (Build & Integrate)
+    |       |-- System Upgrades & Automation (ERP, POS, CRM)
+    |       |-- Cybersecurity & Infrastructure Security
+    |       |-- AI Deployment (Internal Tools, Content, Reporting)
+    |
+    |-- AUDIT (Audit & Compliance)
+    |       |-- Financial Audit Reviews
+    |       |-- Operational Process Audits
+    |       |-- Performance Metrics & Goal Alignment
+    |       |-- Policy Compliance & Internal Controls
+    |
+    |-- SECURITY (Security & Asset Management)
+    |       |-- Physical Site Security
+    |       |-- Asset Monitoring & Infrastructure Control
+    |       |-- Inventory Protection & Surveillance
+    |       |-- Emergency Response & Risk Mitigation 
+
+
+
+
+
+
+
+
+ 
+BUSINESS INTELLIGENCE PAGE
+•	Build the financial tab.
+•	Build pages under each tab
+
+COMMUNICATIONS
+•	Add emails to the communications. It should come after “Messages”.
+•	Build pages under each tab
+
+STRATEGIES
+•	Build pages under each tab
+
+AI 
+•	Build pages under each tab
+•	Use hypothetical data to complete them.
+
+SECURITY
+•	Build pages under each tab
+•	Use hypothetical data to complete them.
+
+DIAGNOSTICS
+•	Build pages under each tab
+•	Use hypothetical data to complete them.
+
+Make sure you check the page preview once again when you are done. Otherwise, they will still not be displaying.

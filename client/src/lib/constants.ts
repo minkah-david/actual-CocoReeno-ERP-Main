@@ -11,24 +11,12 @@ export const menuItems = [
     icon: "ri-building-line",
     submenu: [
       {
-        title: "Chief Executive Officer",
-        path: "/departments/ceo",
-        icon: "ri-user-star-line",
-        submenu: [
-          {
-            title: "Executive Reports",
-            path: "/departments/ceo/reports",
-            icon: "ri-file-list-line"
-          }
-        ]
-      },
-      {
-        title: "Finance & Accountability",
+        title: "Finance",
         path: "/departments/finance",
         icon: "ri-money-dollar-circle-line",
         submenu: [
           {
-            title: "Financial Planning",
+            title: "Financial Planning & Analysis",
             path: "/departments/finance/planning",
             icon: "ri-line-chart-line"
           },
@@ -43,14 +31,14 @@ export const menuItems = [
             icon: "ri-calculator-line"
           },
           {
-            title: "Investor Relations",
+            title: "Investor Relations & Capital Strategy",
             path: "/departments/finance/investors",
             icon: "ri-stock-line"
           }
         ]
       },
       {
-        title: "Operations & Supply Chain",
+        title: "Operations",
         path: "/departments/operations",
         icon: "ri-loader-4-line",
         submenu: [
@@ -77,7 +65,7 @@ export const menuItems = [
         ]
       },
       {
-        title: "Sales & Distribution",
+        title: "Sales",
         path: "/departments/sales",
         icon: "ri-store-2-line",
         submenu: [
@@ -97,23 +85,266 @@ export const menuItems = [
             icon: "ri-shopping-bag-line"
           },
           {
-            title: "Customer Success (CRM)",
+            title: "Sales Support & Customer Success",
             path: "/departments/sales/crm",
             icon: "ri-customer-service-line"
           }
         ]
       },
       {
-        title: "Marketing & Branding",
+        title: "Marketing",
         path: "/departments/marketing",
-        icon: "ri-megaphone-line"
+        icon: "ri-megaphone-line",
+        submenu: [
+          {
+            title: "Brand Strategy & Market Research",
+            path: "/departments/marketing/brand",
+            icon: "ri-mark-pen-line"
+          },
+          {
+            title: "Campaigns & Advertising",
+            path: "/departments/marketing/campaigns",
+            icon: "ri-advertisement-line"
+          },
+          {
+            title: "Digital Marketing",
+            path: "/departments/marketing/digital",
+            icon: "ri-global-line",
+            submenu: [
+              {
+                title: "Social Media",
+                path: "/departments/marketing/digital/social",
+                icon: "ri-chat-smile-line"
+              },
+              {
+                title: "Paid Ads",
+                path: "/departments/marketing/digital/ads",
+                icon: "ri-money-cny-box-line"
+              },
+              {
+                title: "AI Content Creation",
+                path: "/departments/marketing/digital/ai-content",
+                icon: "ri-ai-generate"
+              }
+            ]
+          },
+          {
+            title: "Public Relations & CSR",
+            path: "/departments/marketing/pr",
+            icon: "ri-award-line"
+          }
+        ]
+      },
+      {
+        title: "HR",
+        path: "/departments/hr",
+        icon: "ri-user-settings-line",
+        submenu: [
+          {
+            title: "Recruitment & Onboarding",
+            path: "/departments/hr/recruitment",
+            icon: "ri-user-add-line"
+          },
+          {
+            title: "Employee Training & Development",
+            path: "/departments/hr/training",
+            icon: "ri-graduation-cap-line"
+          },
+          {
+            title: "Compensation & Benefits",
+            path: "/departments/hr/compensation",
+            icon: "ri-wallet-line"
+          },
+          {
+            title: "Performance Management",
+            path: "/departments/hr/performance",
+            icon: "ri-bar-chart-line"
+          },
+          {
+            title: "Workplace Culture & Compliance",
+            path: "/departments/hr/culture",
+            icon: "ri-group-line"
+          }
+        ]
+      },
+      {
+        title: "R&D",
+        path: "/departments/rd",
+        icon: "ri-flask-line",
+        submenu: [
+          {
+            title: "Edibles (Flesh & Water)",
+            path: "/departments/rd/edibles",
+            icon: "ri-restaurant-line"
+          },
+          {
+            title: "Health & Wellness",
+            path: "/departments/rd/health",
+            icon: "ri-heart-pulse-line"
+          },
+          {
+            title: "Inedibles (Husk & Shell)",
+            path: "/departments/rd/inedibles",
+            icon: "ri-recycle-line"
+          }
+        ]
+      },
+      {
+        title: "RSS",
+        path: "/departments/rss",
+        icon: "ri-seed-line",
+        submenu: [
+          {
+            title: "Rural Farmer Empowerment",
+            path: "/departments/rss/empowerment",
+            icon: "ri-hand-heart-line"
+          },
+          {
+            title: "Climate-Smart Agriculture",
+            path: "/departments/rss/climate",
+            icon: "ri-sun-cloudy-line"
+          },
+          {
+            title: "Community Livelihood Projects",
+            path: "/departments/rss/community",
+            icon: "ri-community-line"
+          },
+          {
+            title: "Carbon Footprint Reduction",
+            path: "/departments/rss/carbon",
+            icon: "ri-leaf-line"
+          },
+          {
+            title: "Gender, Youth & Social Inclusion",
+            path: "/departments/rss/inclusion",
+            icon: "ri-group-line"
+          }
+        ]
+      },
+      {
+        title: "Legal",
+        path: "/departments/legal",
+        icon: "ri-scales-line",
+        submenu: [
+          {
+            title: "Contract Drafting & Management",
+            path: "/departments/legal/contracts",
+            icon: "ri-draft-line"
+          },
+          {
+            title: "Intellectual Property Protection",
+            path: "/departments/legal/ip",
+            icon: "ri-copyright-line"
+          },
+          {
+            title: "Regulatory Licensing & Permits",
+            path: "/departments/legal/licensing",
+            icon: "ri-safe-line"
+          },
+          {
+            title: "Legal Risk & Dispute Management",
+            path: "/departments/legal/disputes",
+            icon: "ri-alarm-warning-line"
+          }
+        ]
+      },
+      {
+        title: "IT",
+        path: "/departments/it",
+        icon: "ri-computer-line",
+        submenu: [
+          {
+            title: "Tech Support",
+            path: "/departments/it/support",
+            icon: "ri-customer-service-line"
+          },
+          {
+            title: "Software Development",
+            path: "/departments/it/software",
+            icon: "ri-code-s-slash-line"
+          },
+          {
+            title: "System Upgrades & Automation",
+            path: "/departments/it/systems",
+            icon: "ri-settings-line"
+          },
+          {
+            title: "Cybersecurity & Infrastructure",
+            path: "/departments/it/security",
+            icon: "ri-shield-keyhole-line"
+          },
+          {
+            title: "AI Deployment",
+            path: "/departments/it/ai",
+            icon: "ri-robot-line"
+          }
+        ]
+      },
+      {
+        title: "Audit",
+        path: "/departments/audit",
+        icon: "ri-file-search-line",
+        submenu: [
+          {
+            title: "Financial Audit Reviews",
+            path: "/departments/audit/financial",
+            icon: "ri-bank-line"
+          },
+          {
+            title: "Operational Process Audits",
+            path: "/departments/audit/operational",
+            icon: "ri-flow-chart"
+          },
+          {
+            title: "Performance Metrics & Goal Alignment",
+            path: "/departments/audit/performance",
+            icon: "ri-bar-chart-grouped-line"
+          },
+          {
+            title: "Policy Compliance & Internal Controls",
+            path: "/departments/audit/compliance",
+            icon: "ri-checkbox-multiple-line"
+          }
+        ]
+      },
+      {
+        title: "Security",
+        path: "/departments/physical-security",
+        icon: "ri-shield-line",
+        submenu: [
+          {
+            title: "Physical Site Security",
+            path: "/departments/physical-security/site",
+            icon: "ri-building-line"
+          },
+          {
+            title: "Asset Monitoring & Infrastructure",
+            path: "/departments/physical-security/assets",
+            icon: "ri-radar-line"
+          },
+          {
+            title: "Inventory Protection & Surveillance",
+            path: "/departments/physical-security/inventory",
+            icon: "ri-cctv-line"
+          },
+          {
+            title: "Emergency Response & Risk Mitigation",
+            path: "/departments/physical-security/emergency",
+            icon: "ri-alarm-warning-line"
+          }
+        ]
       }
     ]
   },
   {
-    title: "Business Intelligence",
+    title: "BI",
     path: "/business-intelligence",
     icon: "ri-line-chart-line"
+  },
+  {
+    title: "Architectures",
+    path: "/architectures",
+    icon: "ri-layout-masonry-line"
   },
   {
     title: "Strategies",
@@ -121,14 +352,21 @@ export const menuItems = [
     icon: "ri-strategy-line"
   },
   {
-    title: "AI",
+    title: "AI & Automations",
     path: "/ai",
-    icon: "ri-robot-line"
-  },
-  {
-    title: "Automations & Workflows",
-    path: "/automations",
-    icon: "ri-settings-line"
+    icon: "ri-robot-line",
+    submenu: [
+      {
+        title: "AI",
+        path: "/ai/intelligence",
+        icon: "ri-brain-line"
+      },
+      {
+        title: "Automations & Workflows",
+        path: "/ai/automations",
+        icon: "ri-settings-5-line"
+      }
+    ]
   },
   {
     title: "Security",
@@ -141,9 +379,41 @@ export const menuItems = [
     icon: "ri-health-book-line"
   },
   {
+    title: "Cloud Manager",
+    path: "/cloud-manager",
+    icon: "ri-cloud-line"
+  },
+  {
     title: "Communications",
     path: "/communications",
-    icon: "ri-chat-3-line"
+    icon: "ri-chat-3-line",
+    submenu: [
+      {
+        title: "Communications",
+        path: "/communications",
+        icon: "ri-message-3-line"
+      },
+      {
+        title: "Projects Management",
+        path: "/communications/projects",
+        icon: "ri-task-line"
+      }
+    ]
+  },
+  {
+    title: "User Management",
+    path: "/user-management",
+    icon: "ri-user-settings-line"
+  },
+  {
+    title: "System Settings",
+    path: "/system-settings",
+    icon: "ri-settings-line"
+  },
+  {
+    title: "Help & Support",
+    path: "/support",
+    icon: "ri-question-line"
   }
 ];
 
@@ -323,14 +593,68 @@ export const weatherData = {
   advisory: "Expected rain in Western Region farms next 48 hours. Consider adjusting harvest schedule."
 };
 
-// Sample Revenue Data for Charts
+// Sample Revenue and Expenditure Data for Charts
 export const revenueData = [
-  { month: "Jan", revenue: 800000 },
-  { month: "Feb", revenue: 1200000 },
-  { month: "Mar", revenue: 900000 },
-  { month: "Apr", revenue: 1400000 },
-  { month: "May", revenue: 1300000 },
-  { month: "Jun", revenue: 1600000 }
+  { month: "Jan", revenue: 800000, expenditure: 640000, profit: 160000 },
+  { month: "Feb", revenue: 1200000, expenditure: 820000, profit: 380000 },
+  { month: "Mar", revenue: 900000, expenditure: 750000, profit: 150000 },
+  { month: "Apr", revenue: 1400000, expenditure: 950000, profit: 450000 },
+  { month: "May", revenue: 1300000, expenditure: 880000, profit: 420000 },
+  { month: "Jun", revenue: 1600000, expenditure: 1050000, profit: 550000 }
+];
+
+// Sample Salespersons Data
+export const salespersonsData = [
+  { 
+    id: 1, 
+    name: "Kofi Mensah", 
+    location: { lat: 5.6037, lng: 0.1870 }, // Tema
+    status: "active",
+    performance: 92,
+    sales: "GH₵ 42,500",
+    clients: 18,
+    territory: "Greater Accra - East"
+  },
+  { 
+    id: 2, 
+    name: "Ama Owusu", 
+    location: { lat: 5.6142, lng: -0.2073 }, // Accra
+    status: "active",
+    performance: 88,
+    sales: "GH₵ 38,900",
+    clients: 15,
+    territory: "Greater Accra - Central" 
+  },
+  { 
+    id: 3, 
+    name: "Kwame Asante", 
+    location: { lat: 6.6885, lng: -1.6244 }, // Kumasi
+    status: "idle",
+    performance: 78,
+    sales: "GH₵ 28,700",
+    clients: 12,
+    territory: "Ashanti Region" 
+  },
+  { 
+    id: 4, 
+    name: "Efua Dadzie", 
+    location: { lat: 5.9032, lng: -0.9520 }, // Koforidua
+    status: "offline",
+    performance: 82,
+    sales: "GH₵ 32,100",
+    clients: 14,
+    territory: "Eastern Region" 
+  },
+  { 
+    id: 5, 
+    name: "Kwesi Adams", 
+    location: { lat: 5.1053, lng: -1.2466 }, // Cape Coast
+    status: "active",
+    performance: 95,
+    sales: "GH₵ 45,800",
+    clients: 20,
+    territory: "Central Region" 
+  }
 ];
 
 // Department List
@@ -345,7 +669,7 @@ export const departmentList = [
       "Financial Planning & Analysis",
       "Accounting & Bookkeeping",
       "Budgeting & Cost Control",
-      "Investor Relations"
+      "Investor Relations & Capital Strategy"
     ]
   },
   {
@@ -371,7 +695,7 @@ export const departmentList = [
       "Direct Sales (B2C)",
       "Mobile & Field Sales",
       "E-Commerce Sales",
-      "Customer Success (CRM)"
+      "Sales Support & Customer Success"
     ]
   },
   {
@@ -389,7 +713,7 @@ export const departmentList = [
   },
   {
     id: 5,
-    name: "Human Resources",
+    name: "Human Resource & Administration",
     description: "Recruitment, training, compensation, and workplace management.",
     memberCount: 15,
     icon: "ri-user-settings-line",
@@ -400,6 +724,85 @@ export const departmentList = [
       "Performance Management",
       "Workplace Culture & Compliance"
     ]
+  },
+  {
+    id: 6,
+    name: "Research & Development",
+    description: "Product development, innovation, and research initiatives.",
+    memberCount: 9,
+    icon: "ri-flask-line",
+    subDepartments: [
+      "Edibles (Flesh & Water)",
+      "Health & Wellness",
+      "Inedibles (Husk & Shell)"
+    ]
+  },
+  {
+    id: 7,
+    name: "Rural Development, Sustainability & Social Equity",
+    description: "Sustainability initiatives, rural development, and social programs.",
+    memberCount: 11,
+    icon: "ri-seed-line",
+    subDepartments: [
+      "Rural Farmer Empowerment Programmes",
+      "Climate-Smart Agriculture Integration",
+      "Community Livelihood Projects",
+      "Carbon Footprint Reduction Initiatives",
+      "Gender, Youth & Social Inclusion"
+    ]
+  },
+  {
+    id: 8,
+    name: "Legal & Regulatory Affairs",
+    description: "Legal compliance, contracts, and regulatory management.",
+    memberCount: 7,
+    icon: "ri-scales-line",
+    subDepartments: [
+      "Contract Drafting & Management",
+      "Intellectual Property Protection",
+      "Regulatory Licensing & Permits",
+      "Legal Risk & Dispute Management"
+    ]
+  },
+  {
+    id: 9,
+    name: "Information Technology",
+    description: "IT systems, software development, and technical support.",
+    memberCount: 14,
+    icon: "ri-computer-line",
+    subDepartments: [
+      "Tech Support",
+      "Software Development",
+      "System Upgrades & Automation",
+      "Cybersecurity & Infrastructure Security",
+      "AI Deployment"
+    ]
+  },
+  {
+    id: 10,
+    name: "Audit & Compliance",
+    description: "Auditing, process review, and compliance management.",
+    memberCount: 5,
+    icon: "ri-file-search-line",
+    subDepartments: [
+      "Financial Audit Reviews",
+      "Operational Process Audits",
+      "Performance Metrics & Goal Alignment",
+      "Policy Compliance & Internal Controls"
+    ]
+  },
+  {
+    id: 11,
+    name: "Security & Asset Management",
+    description: "Physical security, asset protection, and emergency response.",
+    memberCount: 8,
+    icon: "ri-shield-line",
+    subDepartments: [
+      "Physical Site Security",
+      "Asset Monitoring & Infrastructure Control",
+      "Inventory Protection & Surveillance",
+      "Emergency Response & Risk Mitigation"
+    ]
   }
 ];
 
@@ -409,25 +812,37 @@ export const organogramStructure = {
     id: "ceo",
     title: "Chief Executive Officer",
     name: "Dr. Michael Kwaku",
-    reports: ["coo", "cfo", "cto"]
+    reports: ["coo", "cfo", "cto", "cmo", "chro"]
   },
   coo: {
     id: "coo",
     title: "Chief Operating Officer",
     name: "Grace Mensah",
-    reports: []
+    reports: ["operations", "sales", "security"]
   },
   cfo: {
     id: "cfo",
     title: "Chief Financial Officer",
     name: "Samuel Osei",
-    reports: []
+    reports: ["finance", "audit"]
   },
   cto: {
     id: "cto",
     title: "Chief Technology Officer",
     name: "Akua Darko",
-    reports: []
+    reports: ["it", "ai"]
+  },
+  cmo: {
+    id: "cmo",
+    title: "Chief Marketing Officer",
+    name: "Kwame Darko",
+    reports: ["marketing"]
+  },
+  chro: {
+    id: "chro",
+    title: "Chief Human Resources Officer",
+    name: "Efua Mensah",
+    reports: ["hr"]
   },
   departments: [
     {
@@ -437,7 +852,7 @@ export const organogramStructure = {
     },
     {
       id: "operations",
-      title: "Operations & Supply",
+      title: "Operations & Supply Chain",
       subDepartments: 4
     },
     {
@@ -452,13 +867,38 @@ export const organogramStructure = {
     },
     {
       id: "hr",
-      title: "Human Resources",
+      title: "Human Resource & Administration",
       subDepartments: 5
     },
     {
       id: "rd",
-      title: "R&D",
+      title: "Research & Development",
       subDepartments: 3
+    },
+    {
+      id: "rss",
+      title: "Rural Development, Sustainability & Social Equity",
+      subDepartments: 5
+    },
+    {
+      id: "legal",
+      title: "Legal & Regulatory Affairs",
+      subDepartments: 4
+    },
+    {
+      id: "it",
+      title: "Information Technology",
+      subDepartments: 5
+    },
+    {
+      id: "audit",
+      title: "Audit & Compliance",
+      subDepartments: 4
+    },
+    {
+      id: "security",
+      title: "Security & Asset Management",
+      subDepartments: 4
     }
   ]
 };
