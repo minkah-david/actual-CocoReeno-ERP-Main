@@ -1,6 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import DashboardStats from "@/components/dashboard/DashboardStats";
 import RevenueChart from "@/components/dashboard/RevenueChart";
+import ProfitLossBlock from "@/components/dashboard/ProfitLossBlock";
+import SalespersonsTracking from "@/components/dashboard/SalespersonsTracking";
+import SalespersonsPerformance from "@/components/dashboard/SalespersonsPerformance";
 import InventoryStatus from "@/components/dashboard/InventoryStatus";
 import RecentActivity from "@/components/dashboard/RecentActivity";
 import TopFarmingCommunities from "@/components/dashboard/TopFarmingCommunities";
@@ -18,36 +21,56 @@ const Dashboard = () => {
       {/* Quick stats */}
       <DashboardStats />
       
-      {/* Revenue & Inventory */}
+      {/* Revenue & Profit/Loss */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-        {/* Revenue chart */}
+        {/* Revenue & Expenditure chart */}
         <div className="lg:col-span-2">
           <RevenueChart />
         </div>
         
+        {/* Profit & Loss block */}
+        <div>
+          <ProfitLossBlock />
+        </div>
+      </div>
+      
+      {/* Salespersons Tracking & Performance */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+        {/* Salespersons Map */}
+        <div className="lg:col-span-2">
+          <SalespersonsTracking />
+        </div>
+        
+        {/* Top Performing Salespersons */}
+        <div>
+          <SalespersonsPerformance />
+        </div>
+      </div>
+      
+      {/* Inventory Status & Recent Activity */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
         {/* Inventory status */}
         <div>
           <InventoryStatus />
         </div>
+        
+        {/* Recent Activity */}
+        <div className="lg:col-span-2">
+          <RecentActivity />
+        </div>
       </div>
       
-      {/* Recent Activity and Farming Communities */}
+      {/* Farming Communities & Sustainability */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-        {/* Recent Activity */}
-        <RecentActivity />
-        
         {/* Top Farming Communities */}
         <TopFarmingCommunities />
+        
+        {/* Sustainability Impact */}
+        <SustainabilityImpact />
       </div>
       
-      {/* Sustainability Impact & Weather */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-        {/* Sustainability Impact */}
-        <div className="lg:col-span-2">
-          <SustainabilityImpact />
-        </div>
-        
-        {/* Weather & Farm Conditions */}
+      {/* Weather & Farm Conditions */}
+      <div className="mb-8">
         <WeatherFarmConditions />
       </div>
     </div>

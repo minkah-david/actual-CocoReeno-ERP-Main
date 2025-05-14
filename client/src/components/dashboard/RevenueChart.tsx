@@ -3,7 +3,7 @@ import { useRevenueData } from "@/hooks/useDashboardData";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
 
 const RevenueChart = () => {
   const [period, setPeriod] = useState<'monthly' | 'quarterly' | 'yearly'>('monthly');
@@ -41,7 +41,7 @@ const RevenueChart = () => {
     <Card>
       <CardContent className="p-5">
         <div className="flex items-center justify-between mb-6">
-          <h3 className="font-poppins font-semibold text-lg text-foreground">Revenue Trend</h3>
+          <h3 className="font-poppins font-semibold text-lg text-foreground">Revenue & Expenditure</h3>
           <div className="flex space-x-2">
             <Button 
               size="sm" 
@@ -87,12 +87,27 @@ const RevenueChart = () => {
               />
               <Tooltip 
                 formatter={formatTooltipValue}
-                cursor={{ fill: 'rgba(158, 207, 69, 0.1)' }}
+                cursor={{ fill: 'rgba(0, 0, 0, 0.05)' }}
+              />
+              <Legend 
+                verticalAlign="top" 
+                height={36}
+                iconType="circle" 
+                iconSize={8}
+                formatter={(value) => <span style={{ color: '#4B5563', fontSize: '0.875rem' }}>{value}</span>}
               />
               <Bar 
+                name="Revenue" 
                 dataKey="revenue" 
                 fill="rgba(158, 207, 69, 0.8)" 
-                barSize={40}
+                barSize={20}
+                radius={[4, 4, 0, 0]}
+              />
+              <Bar 
+                name="Expenditure" 
+                dataKey="expenditure" 
+                fill="rgba(239, 68, 68, 0.7)" 
+                barSize={20}
                 radius={[4, 4, 0, 0]}
               />
             </BarChart>

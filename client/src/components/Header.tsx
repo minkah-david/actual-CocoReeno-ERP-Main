@@ -147,8 +147,19 @@ const Header = ({ toggleSidebar }: HeaderProps) => {
               </Avatar>
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
-            <DropdownMenuLabel>My Account</DropdownMenuLabel>
+          <DropdownMenuContent align="end" className="w-60">
+            <div className="px-4 py-3 bg-muted/30">
+              <div className="flex items-center gap-3">
+                <Avatar className="h-10 w-10">
+                  <AvatarImage src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61" alt="Dr. Michael Kwaku" />
+                  <AvatarFallback>MK</AvatarFallback>
+                </Avatar>
+                <div>
+                  <p className="font-medium text-sm">Dr. Michael Kwaku</p>
+                  <p className="text-xs text-muted-foreground">CEO & Founder</p>
+                </div>
+              </div>
+            </div>
             <DropdownMenuSeparator />
             <DropdownMenuItem className="cursor-pointer">
               <i className="ri-user-line mr-2"></i>
