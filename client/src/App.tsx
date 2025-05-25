@@ -18,13 +18,42 @@ import Communications from "@/pages/Communications";
 import DepartmentDetail from "@/pages/department/DepartmentDetail";
 import SubDepartmentDetail from "@/pages/department/SubDepartmentDetail";
 
+// Import all department pages
+import FinancePage from "@/pages/department/FinancePage";
+import OperationsPage from "@/pages/department/OperationsPage";
+import SalesPage from "@/pages/department/SalesPage";
+import MarketingPage from "@/pages/department/MarketingPage";
+import HRPage from "@/pages/department/HRPage";
+import RDPage from "@/pages/department/RDPage";
+import RSSPage from "@/pages/department/RSSPage";
+import LegalPage from "@/pages/department/LegalPage";
+import ITPage from "@/pages/department/ITPage";
+import AuditPage from "@/pages/department/AuditPage";
+import SecurityPage from "@/pages/department/SecurityPage";
+
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Dashboard} />
       <Route path="/departments" component={DepartmentsPage} />
+      
+      {/* Specific Department Pages */}
+      <Route path="/departments/finance" component={FinancePage} />
+      <Route path="/departments/operations" component={OperationsPage} />
+      <Route path="/departments/sales" component={SalesPage} />
+      <Route path="/departments/marketing" component={MarketingPage} />
+      <Route path="/departments/hr" component={HRPage} />
+      <Route path="/departments/rd" component={RDPage} />
+      <Route path="/departments/rss" component={RSSPage} />
+      <Route path="/departments/legal" component={LegalPage} />
+      <Route path="/departments/it" component={ITPage} />
+      <Route path="/departments/audit" component={AuditPage} />
+      <Route path="/departments/physical-security" component={SecurityPage} />
+      
+      {/* Generic Department Routes */}
       <Route path="/departments/:id" component={DepartmentDetail} />
       <Route path="/departments/:id/:subId" component={SubDepartmentDetail} />
+      
       <Route path="/business-intelligence" component={BusinessIntelligence} />
       <Route path="/strategies" component={Strategies} />
       <Route path="/ai" component={ArtificialIntelligence} />

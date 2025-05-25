@@ -358,7 +358,7 @@ const SecurityPage = () => {
               <CardContent className="p-4">
                 <div className="text-center">
                   <i className="ri-time-line text-3xl text-primary mb-2"></i>
-                  <p className="text-lg font-bold">< 5 min</p>
+                  <p className="text-lg font-bold">{"< 5 min"}</p>
                   <p className="text-sm text-muted-foreground">Avg Response Time</p>
                   <p className="text-xs text-green-600">Industry leading</p>
                 </div>
