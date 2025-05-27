@@ -192,19 +192,159 @@ const BusinessIntelligence = () => {
         </TabsContent>
         
         <TabsContent value="financial">
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-lg">Financial Analysis</CardTitle>
-            </CardHeader>
-            <CardContent>
-              {/* Financial analysis content */}
-              <p className="text-center p-8 text-muted-foreground">
-                Financial analysis tools and detailed reports are under development.
-                <br />
-                Check back soon for comprehensive financial insights.
-              </p>
-            </CardContent>
-          </Card>
+          <div className="space-y-6">
+            {/* Financial KPIs */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+              <Card className="border-l-4 border-green-500">
+                <CardContent className="p-4">
+                  <div className="text-center">
+                    <p className="text-sm font-medium text-muted-foreground">Revenue Growth</p>
+                    <h3 className="text-2xl font-bold text-foreground mt-1">+15.2%</h3>
+                    <p className="text-xs text-green-600">Year over year</p>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card className="border-l-4 border-blue-500">
+                <CardContent className="p-4">
+                  <div className="text-center">
+                    <p className="text-sm font-medium text-muted-foreground">Profit Margin</p>
+                    <h3 className="text-2xl font-bold text-foreground mt-1">28.5%</h3>
+                    <p className="text-xs text-blue-600">Above industry avg</p>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card className="border-l-4 border-purple-500">
+                <CardContent className="p-4">
+                  <div className="text-center">
+                    <p className="text-sm font-medium text-muted-foreground">Cash Flow</p>
+                    <h3 className="text-2xl font-bold text-foreground mt-1">GH₵ 2.8M</h3>
+                    <p className="text-xs text-purple-600">Strong position</p>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card className="border-l-4 border-orange-500">
+                <CardContent className="p-4">
+                  <div className="text-center">
+                    <p className="text-sm font-medium text-muted-foreground">ROI</p>
+                    <h3 className="text-2xl font-bold text-foreground mt-1">22.3%</h3>
+                    <p className="text-xs text-orange-600">Excellent returns</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Financial Charts */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-lg">Monthly Revenue vs Expenses</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="h-64">
+                    <ResponsiveContainer width="100%" height="100%">
+                      <BarChart data={[
+                        { month: 'Jan', revenue: 680000, expenses: 480000 },
+                        { month: 'Feb', revenue: 720000, expenses: 510000 },
+                        { month: 'Mar', revenue: 850000, expenses: 590000 },
+                        { month: 'Apr', revenue: 780000, expenses: 550000 },
+                        { month: 'May', revenue: 920000, expenses: 640000 },
+                        { month: 'Jun', revenue: 980000, expenses: 680000 }
+                      ]}>
+                        <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                        <XAxis dataKey="month" axisLine={false} tickLine={false} />
+                        <YAxis axisLine={false} tickLine={false} tickFormatter={(value) => `GH₵${(value/1000).toFixed(0)}K`} />
+                        <Tooltip formatter={(value) => `GH₵${value.toLocaleString()}`} />
+                        <Bar dataKey="revenue" fill="#A8CF45" name="Revenue" />
+                        <Bar dataKey="expenses" fill="#4D3319" name="Expenses" />
+                      </BarChart>
+                    </ResponsiveContainer>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-lg">Profit Trend Analysis</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="h-64">
+                    <ResponsiveContainer width="100%" height="100%">
+                      <LineChart data={[
+                        { month: 'Jan', profit: 200000, target: 180000 },
+                        { month: 'Feb', profit: 210000, target: 190000 },
+                        { month: 'Mar', profit: 260000, target: 200000 },
+                        { month: 'Apr', profit: 230000, target: 210000 },
+                        { month: 'May', profit: 280000, target: 220000 },
+                        { month: 'Jun', profit: 300000, target: 230000 }
+                      ]}>
+                        <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                        <XAxis dataKey="month" axisLine={false} tickLine={false} />
+                        <YAxis axisLine={false} tickLine={false} tickFormatter={(value) => `GH₵${(value/1000).toFixed(0)}K`} />
+                        <Tooltip formatter={(value) => `GH₵${value.toLocaleString()}`} />
+                        <Line type="monotone" dataKey="profit" stroke="#A8CF45" strokeWidth={3} dot={{ r: 4 }} />
+                        <Line type="monotone" dataKey="target" stroke="#4D3319" strokeDasharray="5 5" strokeWidth={2} dot={{ r: 3 }} />
+                      </LineChart>
+                    </ResponsiveContainer>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Financial Insights */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-lg">Financial Highlights</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3">
+                    <li className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                      <span className="text-sm">Revenue exceeded targets by 12%</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                      <span className="text-sm">Operating costs reduced by 8%</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                      <span className="text-sm">Cash flow improved significantly</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                      <span className="text-sm">Strong financial position maintained</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-lg">Key Financial Ratios</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm">Current Ratio</span>
+                      <span className="font-semibold">2.4:1</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm">Debt-to-Equity</span>
+                      <span className="font-semibold">0.3:1</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm">Asset Turnover</span>
+                      <span className="font-semibold">1.8x</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm">Gross Margin</span>
+                      <span className="font-semibold">42.5%</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
         </TabsContent>
         
         <TabsContent value="farmers">
